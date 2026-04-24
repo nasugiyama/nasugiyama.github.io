@@ -24,8 +24,8 @@
         nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(245,243,239,.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border); padding: 0 4rem; height: 64px; display: flex; align-items: center; justify-content: space-between; transition: background .3s, border-color .3s; }
         [data-theme="dark"] nav { background: rgba(15,25,35,.94); }
         .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 600; letter-spacing: .04em; color: var(--text); text-decoration: none; transition: color .3s; }
-        .nav-links { display: flex; gap: 1.75rem; list-style: none; }
-        .nav-links a { font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color .2s; }
+        .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+        .nav-links a { font-size: .66rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--text-muted); text-decoration: none; transition: color .2s; }
         .nav-links a:hover, .nav-links a.active { color: var(--accent); }
         .nav-controls { display: flex; align-items: center; gap: .6rem; }
         .lang-toggle { display: flex; background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 3px; gap: 2px; transition: background .3s, border-color .3s; }
@@ -50,7 +50,7 @@
         .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 300; color: #fff; line-height: 1.02; letter-spacing: -.02em; margin-bottom: 1.5rem; }
         .hero h1 em { font-style: italic; color: rgba(255,255,255,.42); }
         .hero-sub { font-size: .93rem; color: rgba(255,255,255,.44); max-width: 460px; line-height: 1.75; margin-bottom: 2.5rem; }
-        .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
         .btn-p { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: white; padding: 12px 28px; font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background .2s, transform .15s; }
         .btn-p:hover { background: var(--accent-dark); transform: translateY(-2px); }
         .btn-o { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,.22); color: rgba(255,255,255,.68); padding: 12px 28px; font-size: .7rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: border-color .2s, color .2s; }
@@ -89,24 +89,53 @@
         .trole { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text); margin-bottom: .2rem; transition: color .3s; }
         .tco { font-size: .81rem; color: var(--text-muted); font-weight: 500; margin-bottom: 1.2rem; transition: color .3s; }
         .tdesc { font-size: .88rem; color: var(--text); font-style: italic; margin-bottom: 1rem; line-height: 1.7; transition: color .3s; }
-        .tsub { font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 1.1rem 0 .6rem; }
+        .tsub { font-size: .63rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 1.1rem 0 .6rem; }
         .tbullets { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
         .tbullets li { font-size: .87rem; color: var(--text-muted); line-height: 1.65; padding-left: 1.4rem; position: relative; transition: color .3s; }
         .tbullets li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 
+        /* PROJECTS */
+        #projects { background: var(--surface); }
+        .pgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+        .pcard { background: var(--bg); border-radius: 6px; overflow: hidden; border: 1px solid var(--border); transition: transform .25s, box-shadow .25s, border-color .3s, background .3s; }
+        .pcard:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,.1); border-color: var(--accent); }
+        [data-theme="dark"] .pcard:hover { box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+
+        /* Carousel */
+        .carousel { position: relative; overflow: hidden; background: #111; }
+        .car-track { display: flex; transition: transform .4s ease; }
+        .car-track img { min-width: 100%; height: 210px; object-fit: cover; object-position: top; display: block; }
+        .car-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.55); border: none; color: white; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-size: 1rem; display: flex; align-items: center; justify-content: center; transition: background .2s; z-index: 2; }
+        .car-btn:hover { background: rgba(0,0,0,.8); }
+        .car-prev { left: 8px; }
+        .car-next { right: 8px; }
+        .car-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; z-index: 2; }
+        .cdot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.4); cursor: pointer; transition: background .2s; border: none; padding: 0; }
+        .cdot.active { background: white; }
+
+        .pbody { padding: 1.6rem; }
+        .pclient { font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: .35rem; }
+        .ptitle { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--text); margin-bottom: .65rem; line-height: 1.3; transition: color .3s; }
+        .pdesc { font-size: .83rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.1rem; transition: color .3s; }
+        .ptools { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+        .ptool { font-size: .68rem; font-weight: 500; padding: 3px 10px; border-radius: 2px; background: var(--accent-light); color: var(--accent); transition: background .3s, color .3s; }
+        .plink { display: inline-flex; align-items: center; gap: 6px; font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); padding-bottom: 2px; transition: border-color .2s; }
+        .plink:hover { border-color: var(--accent); }
+        .plink svg { fill: var(--accent); }
+
         /* SKILLS */
-        #skills { background: var(--surface); }
+        #skills { background: var(--bg); }
         .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1.6rem; }
-        .scat { background: var(--bg); padding: 1.9rem; border-radius: 4px; border-top: 3px solid var(--accent); transition: background .3s; }
+        .scat { background: var(--surface); padding: 1.9rem; border-radius: 4px; border-top: 3px solid var(--accent); transition: background .3s; }
         .scatlbl { font-size: .62rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.1rem; }
         .stags { display: flex; flex-wrap: wrap; gap: .45rem; }
-        .stag { display: inline-block; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: .77rem; font-weight: 500; padding: 5px 12px; border-radius: 2px; cursor: default; transition: background .2s, border-color .2s, color .2s; }
+        .stag { display: inline-block; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-size: .77rem; font-weight: 500; padding: 5px 12px; border-radius: 2px; cursor: default; transition: background .2s, border-color .2s, color .2s; }
         .stag:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
 
         /* EDUCATION */
-        #education { background: var(--bg); }
+        #education { background: var(--surface); }
         .egrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 1.6rem; }
-        .ecard { background: var(--surface); padding: 1.9rem; border-radius: 4px; border-left: 3px solid var(--border); transition: border-color .25s, transform .25s, background .3s; }
+        .ecard { background: var(--bg); padding: 1.9rem; border-radius: 4px; border-left: 3px solid var(--border); transition: border-color .25s, transform .25s, background .3s; }
         .ecard:hover { border-left-color: var(--accent); transform: translateY(-3px); }
         .estatus { display: inline-block; font-size: .57rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: .9rem; }
         .estatus.cur { background: rgba(26,95,168,.12); color: var(--accent); }
@@ -152,6 +181,7 @@
 
         /* RESPONSIVE */
         @media (max-width: 1100px) { section { padding: 5rem 2.5rem; } nav { padding: 0 2.5rem; } .hero { padding: 100px 2.5rem 8rem; } .hero-stats { left: 2.5rem; } .hero-photo { width: 210px; height: 210px; } footer { padding: 2rem 2.5rem; } }
+        @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
             nav { padding: 0 1.5rem; }
             .nav-links { display: none; }
@@ -175,6 +205,7 @@
     <ul class="nav-links" id="navLinks">
         <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experiência</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
         <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
         <li><a href="#education" data-i18n="nav.education">Formação</a></li>
         <li><a href="#languages" data-i18n="nav.languages">Idiomas</a></li>
@@ -252,7 +283,6 @@
 <section id="experience" style="background:var(--bg)">
     <div class="sh reveal"><span class="sn">02</span><h2 class="st" data-i18n="s2">Experiência</h2><div class="sl"></div></div>
     <div class="timeline">
-
         <div class="titem cur reveal">
             <div class="tdot"></div>
             <div class="tperiod">Nov 2024 — <span data-i18n="cur">Atual</span></div>
@@ -314,7 +344,6 @@
                 <ul class="tbullets">
                     <li>Criação de painéis com DAX avançado e SQL, sempre pensando na experiência de quem vai consumir o dado.</li>
                     <li>Conversas diretas com o cliente para entender o que ele precisava ver e como entregar isso de forma visual e prática.</li>
-                    <li>Ajustes em relatórios no Looker Studio, trazendo mais flexibilidade e leitura clara para cada tipo de área.</li>
                     <li>Suporte com tratamento de dados e ETL, organizando as bases para garantir consistência nos relatórios finais.</li>
                 </ul>
             </div>
@@ -331,7 +360,6 @@
                 <ul class="tbullets">
                     <li>Dashboards built with advanced DAX and SQL, always keeping the end-user experience in mind.</li>
                     <li>Direct client conversations to understand what they needed to see and how to deliver it visually.</li>
-                    <li>Looker Studio report adjustments, bringing more flexibility and clear readability per team.</li>
                     <li>Data treatment and ETL support, organizing datasets to ensure consistency in final reports.</li>
                 </ul>
             </div>
@@ -357,7 +385,6 @@
                     <li>Conexão entre bases e automação de fluxos com Azure DevOps, garantindo rastreabilidade e organização dos projetos.</li>
                     <li>Uso de SQL e Power Query no dia a dia para tratar dados e entregar relatórios mais confiáveis e ágeis.</li>
                     <li>Apoio na configuração do ambiente Power BI com controle de acesso, organização por área e segurança da informação.</li>
-                    <li>Levantamento de oportunidades para simplificar rotinas analíticas e eliminar retrabalho em análises recorrentes.</li>
                 </ul>
             </div>
             <div class="en-only" style="display:none">
@@ -375,8 +402,124 @@
                     <li>System integration and flow automation with Azure DevOps, ensuring traceability and project organization.</li>
                     <li>SQL and Power Query for daily data treatment and reliable, agile report delivery.</li>
                     <li>Power BI environment setup with access control, area organization, and data security.</li>
-                    <li>Identification of opportunities to simplify analytical routines and eliminate rework in recurring analyses.</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="sh reveal"><span class="sn">03</span><h2 class="st" data-i18n="s3">Projetos</h2><div class="sl"></div></div>
+    <div class="pgrid">
+
+        <div class="pcard reveal">
+            <div class="carousel">
+                <div class="car-track">
+                    <img src="portfolio/Projeto%201/Tela01.png" alt="HPN Global Sales Dashboard - Tela 1">
+                    <img src="portfolio/Projeto%201/Tela02.png" alt="HPN Global Sales Dashboard - Tela 2">
+                    <img src="portfolio/Projeto%201/Tela03.png" alt="HPN Global Sales Dashboard - Tela 3">
+                </div>
+                <button class="car-btn car-prev">&#8249;</button>
+                <button class="car-btn car-next">&#8250;</button>
+                <div class="car-dots">
+                    <button class="cdot active"></button>
+                    <button class="cdot"></button>
+                    <button class="cdot"></button>
+                </div>
+            </div>
+            <div class="pbody">
+                <div class="pclient">HPN — Heavy Power Nutrition</div>
+                <div class="ptitle pt-only">Dashboard de Vendas B2B Global</div>
+                <div class="ptitle en-only" style="display:none">B2B Global Sales Dashboard</div>
+                <div class="pdesc pt-only">Dashboard integrando dados de todos os centros de distribuição global da HPN. KPIs de Vendas Brutas, Devoluções, Margem e análise de performance por região e canal de distribuição.</div>
+                <div class="pdesc en-only" style="display:none">Dashboard integrating data from all HPN global distribution centers. KPIs for Gross Sales, Returns, Margin, and performance analysis by region and distribution channel.</div>
+                <div class="ptools"><span class="ptool">Power BI</span><span class="ptool">DAX</span><span class="ptool">Star Schema</span><span class="ptool">SQL</span><span class="ptool">Figma</span></div>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiYmE3OWU1NjEtMzFiMy00Zjk1LWE0YTgtMjRiYjZhYTVkMTRmIiwidCI6ImRhMDY5NDA2LWYxZmMtNDRhYS1iMzVlLWU4NjZiM2Q4OGJmZSJ9" target="_blank" rel="noopener" class="plink">
+                    <svg width="13" height="13" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    <span data-i18n="view">Ver projeto</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="pcard reveal">
+            <div class="carousel">
+                <div class="car-track">
+                    <img src="portfolio/Projeto%202/Tela01.png" alt="Income Statement Dashboard - Tela 1">
+                    <img src="portfolio/Projeto%202/Tela02.png" alt="Income Statement Dashboard - Tela 2">
+                </div>
+                <button class="car-btn car-prev">&#8249;</button>
+                <button class="car-btn car-next">&#8250;</button>
+                <div class="car-dots">
+                    <button class="cdot active"></button>
+                    <button class="cdot"></button>
+                </div>
+            </div>
+            <div class="pbody">
+                <div class="pclient">HPN Brasil</div>
+                <div class="ptitle pt-only">Dashboard Income Statement (DRE)</div>
+                <div class="ptitle en-only" style="display:none">Income Statement Dashboard (DRE)</div>
+                <div class="pdesc pt-only">Automatização da DRE da HPN Brasil com análises verticais e horizontais. Indicadores de Vendas Brutas, Líquidas, Margem Bruta e Lucro Líquido para prestação de contas à matriz americana.</div>
+                <div class="pdesc en-only" style="display:none">Automation of HPN Brasil's Income Statement with vertical and horizontal analyses. KPIs for Gross Sales, Net Sales, Gross Margin and Net Income for reporting to the US headquarters.</div>
+                <div class="ptools"><span class="ptool">Power BI</span><span class="ptool">DAX</span><span class="ptool">Figma</span><span class="ptool">Business Intelligence</span></div>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiZjExZDYyYzktNzZjMy00MTQ1LWFkZDAtM2I4YzdmYTk1ODE3IiwidCI6ImRhMDY5NDA2LWYxZmMtNDRhYS1iMzVlLWU4NjZiM2Q4OGJmZSJ9" target="_blank" rel="noopener" class="plink">
+                    <svg width="13" height="13" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    <span data-i18n="view">Ver projeto</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="pcard reveal">
+            <div class="carousel">
+                <div class="car-track">
+                    <img src="portfolio/Projeto%203/Tela01.png" alt="B2B Sales by Supervisor - Tela 1">
+                    <img src="portfolio/Projeto%203/Tela02.png" alt="B2B Sales by Supervisor - Tela 2">
+                </div>
+                <button class="car-btn car-prev">&#8249;</button>
+                <button class="car-btn car-next">&#8250;</button>
+                <div class="car-dots">
+                    <button class="cdot active"></button>
+                    <button class="cdot"></button>
+                </div>
+            </div>
+            <div class="pbody">
+                <div class="pclient">HPN</div>
+                <div class="ptitle pt-only">Análise de Vendas B2B por Supervisor</div>
+                <div class="ptitle en-only" style="display:none">B2B Sales Analysis by Supervisor</div>
+                <div class="pdesc pt-only">Consolidação e análise das vendas B2B por supervisor, comparando faturamento líquido com metas mensais por categoria de produto. Rateio proporcional com DAX para visão granular de performance.</div>
+                <div class="pdesc en-only" style="display:none">Consolidation and analysis of B2B sales by supervisor, comparing net revenue against monthly targets per product category. Proportional DAX allocation for granular performance visibility.</div>
+                <div class="ptools"><span class="ptool">Power BI</span><span class="ptool">DAX</span><span class="ptool">Power Query</span><span class="ptool">Figma</span></div>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiMjlhNGNiODEtNDEwZi00NWRkLWI3ZDMtZjU0MTFkNmI0ZDkxIiwidCI6ImRhMDY5NDA2LWYxZmMtNDRhYS1iMzVlLWU4NjZiM2Q4OGJmZSJ9" target="_blank" rel="noopener" class="plink">
+                    <svg width="13" height="13" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    <span data-i18n="view">Ver projeto</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="pcard reveal">
+            <div class="carousel">
+                <div class="car-track">
+                    <img src="portfolio/Projeto%204/Tela01.png" alt="Sales Overview - Tela 1">
+                    <img src="portfolio/Projeto%204/Tela02.png" alt="Sales Overview - Tela 2">
+                </div>
+                <button class="car-btn car-prev">&#8249;</button>
+                <button class="car-btn car-next">&#8250;</button>
+                <div class="car-dots">
+                    <button class="cdot active"></button>
+                    <button class="cdot"></button>
+                </div>
+            </div>
+            <div class="pbody">
+                <div class="pclient">HPN — Bootcamp Power BI</div>
+                <div class="ptitle pt-only">Sales Overview — Automação de KPIs</div>
+                <div class="ptitle en-only" style="display:none">Sales Overview — KPI Automation</div>
+                <div class="pdesc pt-only">Automatização dos cálculos mensais de Faturamento Bruto, Líquido, Desconto Percentual e Margem Percentual. Eliminação de processos manuais repetitivos e otimização da análise de vendas.</div>
+                <div class="pdesc en-only" style="display:none">Automation of monthly KPI calculations — Gross Revenue, Net Sales, Discount % and Gross Margin. Elimination of repetitive manual processes and sales analysis optimization.</div>
+                <div class="ptools"><span class="ptool">Power BI</span><span class="ptool">DAX</span><span class="ptool">Figma</span></div>
+                <a href="https://app.powerbi.com/view?r=eyJrIjoiZWQyOTIzZWMtYjhjOC00NTA4LWE2ZDgtYTg0YTk5ZmVjOTIwIiwidCI6ImRhMDY5NDA2LWYxZmMtNDRhYS1iMzVlLWU4NjZiM2Q4OGJmZSJ9" target="_blank" rel="noopener" class="plink">
+                    <svg width="13" height="13" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                    <span data-i18n="view">Ver projeto</span>
+                </a>
             </div>
         </div>
 
@@ -384,24 +527,41 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-    <div class="sh reveal"><span class="sn">03</span><h2 class="st" data-i18n="s3">Habilidades</h2><div class="sl"></div></div>
+<section id="skills" style="background:var(--bg)">
+    <div class="sh reveal"><span class="sn">04</span><h2 class="st" data-i18n="s4">Habilidades</h2><div class="sl"></div></div>
     <div class="sgrid reveal">
         <div class="scat">
             <div class="scatlbl">Power Platform</div>
-            <div class="stags"><span class="stag">Power BI</span><span class="stag">Power Apps</span><span class="stag">Power Automate</span><span class="stag">Power Query</span><span class="stag">Dataverse</span></div>
+            <div class="stags">
+                <span class="stag">Power BI</span><span class="stag">Power Apps</span><span class="stag">Power Automate</span>
+                <span class="stag">Power Query</span><span class="stag">Dataverse</span><span class="stag">Canvas Apps</span>
+                <span class="stag">Model-Driven Apps</span><span class="stag">Power BI Service</span><span class="stag pt-only">Conectores Personalizados</span>
+                <span class="stag en-only" style="display:none">Custom Connectors</span>
+            </div>
         </div>
         <div class="scat">
             <div class="scatlbl" data-i18n="sc2">Linguagens &amp; Dados</div>
-            <div class="stags"><span class="stag">DAX</span><span class="stag">SQL</span><span class="stag">Python</span><span class="stag">M Language</span></div>
+            <div class="stags">
+                <span class="stag">DAX</span><span class="stag">SQL</span><span class="stag">Python</span>
+                <span class="stag">M Language</span><span class="stag">JSON</span><span class="stag">XML</span>
+                <span class="stag">HTTP Connectors</span>
+            </div>
         </div>
         <div class="scat">
             <div class="scatlbl" data-i18n="sc3">Modelagem &amp; Arquitetura</div>
-            <div class="stags"><span class="stag">Star Schema</span><span class="stag">ETL</span><span class="stag">Data Modeling</span><span class="stag pt-only">Governança de Dados</span><span class="stag en-only" style="display:none">Data Governance</span></div>
+            <div class="stags">
+                <span class="stag">Star Schema</span><span class="stag">ETL</span><span class="stag">Data Modeling</span>
+                <span class="stag pt-only">Governança de Dados</span><span class="stag en-only" style="display:none">Data Governance</span>
+                <span class="stag">RPA</span>
+            </div>
         </div>
         <div class="scat">
             <div class="scatlbl" data-i18n="sc4">Cloud &amp; Ferramentas</div>
-            <div class="stags"><span class="stag">Azure DevOps</span><span class="stag">SharePoint</span><span class="stag">APIs REST</span><span class="stag">Microsoft 365</span><span class="stag">Looker Studio</span></div>
+            <div class="stags">
+                <span class="stag">Azure DevOps</span><span class="stag">SharePoint</span><span class="stag">APIs REST</span>
+                <span class="stag">Microsoft 365</span><span class="stag">Looker Studio</span><span class="stag">Figma</span>
+                <span class="stag">Copilot Studio</span><span class="stag">AI Builder</span>
+            </div>
         </div>
         <div class="scat">
             <div class="scatlbl">Soft Skills</div>
@@ -417,8 +577,8 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education" style="background:var(--bg)">
-    <div class="sh reveal"><span class="sn">04</span><h2 class="st" data-i18n="s4">Formação</h2><div class="sl"></div></div>
+<section id="education">
+    <div class="sh reveal"><span class="sn">05</span><h2 class="st" data-i18n="s5">Formação</h2><div class="sl"></div></div>
     <div class="egrid">
         <div class="ecard reveal"><span class="estatus cur" data-i18n="ecur">Cursando</span><div class="edeg" data-i18n="ed1">Pós-Graduação em Engenharia de Dados e IA</div><div class="einst">Xperiun | Data Analytics</div><div class="eperiod" data-i18n="ep1">Mar 2025 — Jun 2026</div></div>
         <div class="ecard reveal"><span class="estatus done" data-i18n="edone">Concluído</span><div class="edeg" data-i18n="ed2">Bacharelado em Análise de Dados</div><div class="einst">Xperiun | Data Analytics</div><div class="eperiod" data-i18n="ep2">Jan 2024 — Dez 2025</div></div>
@@ -428,8 +588,8 @@
 </section>
 
 <!-- LANGUAGES -->
-<section id="languages">
-    <div class="sh reveal"><span class="sn">05</span><h2 class="st" data-i18n="s5">Idiomas</h2><div class="sl"></div></div>
+<section id="languages" style="background:var(--navy)">
+    <div class="sh reveal"><span class="sn">06</span><h2 class="st" data-i18n="s6">Idiomas</h2><div class="sl"></div></div>
     <div class="lgrid reveal">
         <div class="lcard"><div class="lflag">🇧🇷</div><div class="lname">Português</div><div class="llevel" data-i18n="lnat">Língua Nativa</div></div>
         <div class="lcard"><div class="lflag">🇬🇧</div><div class="lname">English</div><div class="llevel" data-i18n="ladv">C1 — Avançado</div></div>
@@ -439,7 +599,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
-    <div class="sh reveal"><span class="sn">06</span><h2 class="st" data-i18n="s6">Contato</h2><div class="sl"></div></div>
+    <div class="sh reveal"><span class="sn">07</span><h2 class="st" data-i18n="s7">Contato</h2><div class="sl"></div></div>
     <div class="cgrid">
         <div class="reveal">
             <p class="cintro pt-only">Vamos <em>construir algo</em> extraordinário juntos?</p>
@@ -464,10 +624,6 @@
                 <div class="cicon"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
                 <div><div class="cllbl">Portfolio</div><div class="clval">app.xperiun.com/in/natashasugiyama</div></div>
             </a>
-            <a href="tel:+38630747534" class="clink">
-                <div class="cicon"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
-                <div><div class="cllbl" data-i18n="cphone">Telefone</div><div class="clval">+386 30 747 534</div></div>
-            </a>
         </div>
     </div>
 </section>
@@ -480,11 +636,11 @@
 <script>
 const T = {
   pt: {
-    'nav.about':'Sobre','nav.experience':'Experiência','nav.skills':'Skills','nav.education':'Formação','nav.languages':'Idiomas','nav.contact':'Contato',
+    'nav.about':'Sobre','nav.experience':'Experiência','nav.projects':'Projetos','nav.skills':'Skills','nav.education':'Formação','nav.languages':'Idiomas','nav.contact':'Contato',
     'hero.sub':'Transformo dados em decisões. Especialista em Power Platform, Power BI e automação de processos — criando soluções analíticas de alto impacto para empresas globais.',
     'hero.btn1':'Ver Experiência','hero.btn2':'Entrar em Contato',
     'stat1':'Anos de Exp.','stat2':'Formações','stat3':'Idiomas',
-    's1':'Sobre Mim','s2':'Experiência','s3':'Habilidades','s4':'Formação','s5':'Idiomas','s6':'Contato',
+    's1':'Sobre Mim','s2':'Experiência','s3':'Projetos','s4':'Habilidades','s5':'Formação','s6':'Idiomas','s7':'Contato',
     'aloc':'Localização','alocv':'Mirna, Eslovênia','aspec':'Especialidade','amode':'Modalidade','amodev':'Remoto · Projetos globais',
     'cur':'Atual','rem':'Remoto',
     'sc2':'Linguagens & Dados','sc3':'Modelagem & Arquitetura','sc4':'Cloud & Ferramentas',
@@ -494,14 +650,14 @@ const T = {
     'ed3':'Bacharelado em Engenharia de Produção','ep3':'Jan 2018 — Dez 2022',
     'ed4':'Tecnólogo em Gestão da Cadeia de Suprimentos e Logística','ep4':'Jan 2015 — Dez 2017',
     'lnat':'Língua Nativa','ladv':'C1 — Avançado','lbas':'A2 — Básico',
-    'cphone':'Telefone'
+    'view':'Ver projeto'
   },
   en: {
-    'nav.about':'About','nav.experience':'Experience','nav.skills':'Skills','nav.education':'Education','nav.languages':'Languages','nav.contact':'Contact',
+    'nav.about':'About','nav.experience':'Experience','nav.projects':'Projects','nav.skills':'Skills','nav.education':'Education','nav.languages':'Languages','nav.contact':'Contact',
     'hero.sub':'I turn data into decisions. Power Platform specialist in Power BI and process automation — building high-impact analytical solutions for global companies.',
     'hero.btn1':'View Experience','hero.btn2':'Get in Touch',
     'stat1':'Years of Exp.','stat2':'Degrees','stat3':'Languages',
-    's1':'About Me','s2':'Experience','s3':'Skills','s4':'Education','s5':'Languages','s6':'Contact',
+    's1':'About Me','s2':'Experience','s3':'Projects','s4':'Skills','s5':'Education','s6':'Languages','s7':'Contact',
     'aloc':'Location','alocv':'Mirna, Slovenia','aspec':'Expertise','amode':'Work mode','amodev':'Remote · Global projects',
     'cur':'Present','rem':'Remote',
     'sc2':'Languages & Data','sc3':'Modeling & Architecture','sc4':'Cloud & Tools',
@@ -511,7 +667,7 @@ const T = {
     'ed3':"Bachelor's Degree in Industrial Engineering",'ep3':'Jan 2018 — Dec 2022',
     'ed4':'Associate Degree in Supply Chain Management & Logistics','ep4':'Jan 2015 — Dec 2017',
     'lnat':'Native Language','ladv':'C1 — Advanced','lbas':'A2 — Basic',
-    'cphone':'Phone'
+    'view':'View project'
   }
 };
 
@@ -552,6 +708,27 @@ const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+// Carousels
+document.querySelectorAll('.carousel').forEach(car => {
+  const track = car.querySelector('.car-track');
+  const dots = car.querySelectorAll('.cdot');
+  const total = car.querySelectorAll('.car-track img').length;
+  let cur = 0;
+
+  function goTo(n) {
+    cur = (n + total) % total;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+  }
+
+  car.querySelector('.car-prev').addEventListener('click', () => goTo(cur - 1));
+  car.querySelector('.car-next').addEventListener('click', () => goTo(cur + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+  // Auto-advance every 4s
+  setInterval(() => goTo(cur + 1), 4000);
+});
 
 // Reveal
 const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
