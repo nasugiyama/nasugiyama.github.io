@@ -88,46 +88,25 @@
         .tperiod { font-size: .67rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: .45rem; }
         .trole { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--text); margin-bottom: .2rem; transition: color .3s; }
         .tco { font-size: .81rem; color: var(--text-muted); font-weight: 500; margin-bottom: 1.2rem; transition: color .3s; }
+        .tdesc { font-size: .88rem; color: var(--text); font-style: italic; margin-bottom: 1rem; line-height: 1.7; transition: color .3s; }
+        .tsub { font-size: .65rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 1.1rem 0 .6rem; }
         .tbullets { list-style: none; display: flex; flex-direction: column; gap: .5rem; }
         .tbullets li { font-size: .87rem; color: var(--text-muted); line-height: 1.65; padding-left: 1.4rem; position: relative; transition: color .3s; }
         .tbullets li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 
-        /* PROJECTS */
-        #projects { background: var(--surface); }
-        .pgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-        .pcard { background: var(--bg); border-radius: 6px; overflow: hidden; border: 1px solid var(--border); transition: transform .25s, box-shadow .25s, border-color .3s, background .3s; }
-        .pcard:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(0,0,0,.12); border-color: var(--accent); }
-        [data-theme="dark"] .pcard:hover { box-shadow: 0 20px 50px rgba(0,0,0,.4); }
-        .pvis { height: 170px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
-        .pvis::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 20px 20px; }
-        .pvis-1 { background: linear-gradient(135deg, #1a3a5c, #1a5fa8 60%, #2980d9); }
-        .pvis-2 { background: linear-gradient(135deg, #0d3d2e, #0d6e4e 60%, #10a07a); }
-        .pvis-3 { background: linear-gradient(135deg, #3d1a0d, #8a3a1a 60%, #c85a2a); }
-        .pvis-4 { background: linear-gradient(135deg, #2d1a5c, #5a3aa0 60%, #8a60e8); }
-        /* Mock chart bars */
-        .pvis-bars { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: flex-end; gap: 4px; padding: 0 20px 12px; height: 110px; }
-        .pvis-bar { flex: 1; background: rgba(255,255,255,.18); border-radius: 2px 2px 0 0; }
-        .pbadge { position: absolute; top: 1rem; right: 1rem; font-size: .58rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; padding: 4px 10px; border-radius: 2px; background: rgba(255,255,255,.15); color: white; backdrop-filter: blur(4px); z-index: 1; }
-        .pbody { padding: 1.6rem; }
-        .pclient { font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: .35rem; }
-        .ptitle { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 600; color: var(--text); margin-bottom: .65rem; line-height: 1.3; transition: color .3s; }
-        .pdesc { font-size: .83rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.1rem; transition: color .3s; }
-        .ptools { display: flex; flex-wrap: wrap; gap: .4rem; }
-        .ptool { font-size: .68rem; font-weight: 500; padding: 3px 10px; border-radius: 2px; background: var(--accent-light); color: var(--accent); transition: background .3s, color .3s; }
-
         /* SKILLS */
-        #skills { background: var(--bg); }
+        #skills { background: var(--surface); }
         .sgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: 1.6rem; }
-        .scat { background: var(--surface); padding: 1.9rem; border-radius: 4px; border-top: 3px solid var(--accent); transition: background .3s; }
+        .scat { background: var(--bg); padding: 1.9rem; border-radius: 4px; border-top: 3px solid var(--accent); transition: background .3s; }
         .scatlbl { font-size: .62rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.1rem; }
         .stags { display: flex; flex-wrap: wrap; gap: .45rem; }
-        .stag { display: inline-block; background: var(--bg); border: 1px solid var(--border); color: var(--text); font-size: .77rem; font-weight: 500; padding: 5px 12px; border-radius: 2px; cursor: default; transition: background .2s, border-color .2s, color .2s; }
+        .stag { display: inline-block; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-size: .77rem; font-weight: 500; padding: 5px 12px; border-radius: 2px; cursor: default; transition: background .2s, border-color .2s, color .2s; }
         .stag:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
 
         /* EDUCATION */
-        #education { background: var(--surface); }
+        #education { background: var(--bg); }
         .egrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 1.6rem; }
-        .ecard { background: var(--bg); padding: 1.9rem; border-radius: 4px; border-left: 3px solid var(--border); transition: border-color .25s, transform .25s, background .3s; }
+        .ecard { background: var(--surface); padding: 1.9rem; border-radius: 4px; border-left: 3px solid var(--border); transition: border-color .25s, transform .25s, background .3s; }
         .ecard:hover { border-left-color: var(--accent); transform: translateY(-3px); }
         .estatus { display: inline-block; font-size: .57rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: .9rem; }
         .estatus.cur { background: rgba(26,95,168,.12); color: var(--accent); }
@@ -173,7 +152,6 @@
 
         /* RESPONSIVE */
         @media (max-width: 1100px) { section { padding: 5rem 2.5rem; } nav { padding: 0 2.5rem; } .hero { padding: 100px 2.5rem 8rem; } .hero-stats { left: 2.5rem; } .hero-photo { width: 210px; height: 210px; } footer { padding: 2rem 2.5rem; } }
-        @media (max-width: 900px) { .pgrid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
             nav { padding: 0 1.5rem; }
             .nav-links { display: none; }
@@ -197,7 +175,6 @@
     <ul class="nav-links" id="navLinks">
         <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
         <li><a href="#experience" data-i18n="nav.experience">Experiência</a></li>
-        <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
         <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
         <li><a href="#education" data-i18n="nav.education">Formação</a></li>
         <li><a href="#languages" data-i18n="nav.languages">Idiomas</a></li>
@@ -235,7 +212,7 @@
         </div>
     </div>
     <div class="hero-stats">
-        <div><div class="stat-num">3+</div><div class="stat-lbl" data-i18n="stat1">Anos de Exp.</div></div>
+        <div><div class="stat-num">4+</div><div class="stat-lbl" data-i18n="stat1">Anos de Exp.</div></div>
         <div><div class="stat-num">4</div><div class="stat-lbl" data-i18n="stat2">Formações</div></div>
         <div><div class="stat-num">3</div><div class="stat-lbl" data-i18n="stat3">Idiomas</div></div>
     </div>
@@ -247,16 +224,16 @@
     <div class="about-grid">
         <div class="about-text reveal">
             <div class="pt-only">
-                <p>Especialista em Power Platform com experiência em análise de dados, automação de processos e desenvolvimento de soluções analíticas que impulsionam a tomada de decisão.</p>
-                <p>Possuo expertise em Power BI, Power Apps, Power Automate, SQL, DAX e Python, atuando na modelagem de dados (Star Schema), criação de dashboards interativos e integração via APIs personalizadas.</p>
-                <p>Focada na otimização de processos e governança de dados, desenvolvo aplicações personalizadas e fluxos automatizados que aumentam a eficiência operacional e transformam necessidades empresariais em insights estratégicos.</p>
-                <p>Fluente em português e inglês, com experiência global e atuação 100% remota. Sempre em busca de desafios em ambientes dinâmicos para inovar e gerar valor por meio da tecnologia.</p>
+                <p>Sou especialista em Power Platform com mais de 4 anos de experiência construindo soluções que transformam dados em decisões. Ao longo da minha trajetória, desenvolvi aplicativos no Power Apps, automatizei processos com Power Automate e criei dashboards estratégicos no Power BI para empresas como Mars, Royal Canin, Johnson &amp; Johnson, Itaú, DiDi, Renner e Minerva.</p>
+                <p>Tenho domínio em modelagem de dados com Star Schema, linguagens DAX, SQL, M Language e Python, além de integrações via APIs REST, conectores personalizados e sistemas como SharePoint e Dataverse.</p>
+                <p>Sou movida por desafios reais: entender o problema de negócio, traduzir em lógica técnica e entregar algo que o usuário final sinta a diferença no dia a dia. Trabalho de forma remota com times multidisciplinares no Brasil e no exterior, combinando habilidades analíticas, visão estratégica e comunicação clara.</p>
+                <p>Estou em constante evolução — atualmente cursando Pós-Graduação em Engenharia de Dados e IA, expandindo minha atuação para além da Power Platform e aprofundando conhecimentos em arquitetura de dados e inteligência artificial.</p>
             </div>
             <div class="en-only" style="display:none">
-                <p>Power Platform Specialist with experience in data analysis, process automation, and the development of analytical solutions that drive decision-making.</p>
-                <p>Expertise in Power BI, Power Apps, Power Automate, SQL, DAX, and Python, specializing in data modeling (Star Schema), interactive dashboard creation, and integration via custom APIs.</p>
-                <p>Focused on process optimization and data governance, develops customized applications and automated workflows that enhance operational efficiency and transform business needs into strategic insights.</p>
-                <p>Fluent in Portuguese and English, with global experience and remote work expertise. Always seeking challenges in dynamic environments to innovate and generate value through technology and data analytics.</p>
+                <p>I'm a Power Platform Specialist with over 4 years of experience building solutions that turn data into decisions. Throughout my career, I've developed applications in Power Apps, automated processes with Power Automate, and created strategic dashboards in Power BI for companies like Mars, Royal Canin, Johnson &amp; Johnson, Itaú, DiDi, Renner and Minerva.</p>
+                <p>I'm proficient in data modeling with Star Schema, DAX, SQL, M Language and Python, as well as integrations via REST APIs, custom connectors, and systems like SharePoint and Dataverse.</p>
+                <p>I'm driven by real challenges: understanding the business problem, translating it into technical logic, and delivering something that makes a tangible difference in daily operations. I work remotely with multidisciplinary teams in Brazil and abroad, combining analytical skills, strategic vision, and clear communication.</p>
+                <p>I'm constantly evolving — currently pursuing a Postgraduate degree in Data Engineering &amp; AI, expanding my expertise beyond the Power Platform and deepening my knowledge in data architecture and artificial intelligence.</p>
             </div>
         </div>
         <div class="about-side reveal">
@@ -265,6 +242,7 @@
             <div class="adet"><span class="albl" data-i18n="amode">Modalidade</span><span class="aval" data-i18n="amodev">Remoto · Projetos globais</span></div>
             <div class="adet"><span class="albl">Email</span><span class="aval">nasugiyama23@gmail.com</span></div>
             <div class="adet"><span class="albl">LinkedIn</span><span class="aval">linkedin.com/in/natashasugiyama</span></div>
+            <div class="adet"><span class="albl">GitHub</span><span class="aval">github.com/nasugiyama</span></div>
             <div class="adet"><span class="albl">Portfolio</span><span class="aval">app.xperiun.com/in/natashasugiyama</span></div>
         </div>
     </div>
@@ -280,21 +258,42 @@
             <div class="tperiod">Nov 2024 — <span data-i18n="cur">Atual</span></div>
             <div class="trole">Power Platform Developer</div>
             <div class="tco">NUMEN · São Paulo, SP · <span data-i18n="rem">Remoto</span></div>
-            <ul class="tbullets pt-only">
-                <li>Desenvolvimento de dashboards analíticos para Mars/Royal Canin (canais KAN e VET) com Power BI, cobrindo SELL OUT, Perfect Store, JBP, Service Level e Varejo 360, com modelagem Star Schema e DAX avançado.</li>
-                <li>Construção de aplicativo de gestão logística 3PL para Johnson &amp; Johnson no Power Apps, com integração via API personalizada ao Microsoft Forms e mapeamento XML para ERP.</li>
-                <li>Automação de processos no Power Automate, SharePoint e Dataverse, reduzindo retrabalho e tempo de resposta.</li>
-                <li>Integração de sistemas via APIs personalizadas, conectando múltiplas plataformas para maior rastreamento e eficiência.</li>
-                <li>Colaboração ativa com equipes de negócios e TI, promovendo transformação digital e adoção de soluções low-code.</li>
-            </ul>
-            <ul class="tbullets en-only" style="display:none">
-                <li>Custom app development in Power Apps (Canvas &amp; Model-Driven), enhancing operational efficiency and user experience.</li>
-                <li>Process automation using Power Automate, SharePoint, and Dataverse, ensuring agile and scalable workflows, reducing rework and response time.</li>
-                <li>System integration via APIs, connecting multiple platforms for improved tracking and data management efficiency.</li>
-                <li>Custom API development for Microsoft Forms, automating response collection and processing, minimizing manual errors.</li>
-                <li>Advanced data analysis with Power BI, DAX, and SQL, transforming raw data into strategic insights to optimize processes.</li>
-                <li>Active collaboration with business and IT teams, driving digital transformation and adoption of low-code and RPA solutions.</li>
-            </ul>
+            <div class="pt-only">
+                <ul class="tbullets">
+                    <li>Aplicativos criados no Power Apps (Canvas e Model-Driven) para substituir processos manuais e acelerar o dia a dia dos times.</li>
+                    <li>Fluxos estruturados no Power Automate com SharePoint e Dataverse, trazendo mais rastreabilidade e menos erros operacionais.</li>
+                    <li>Conexões entre sistemas feitas com APIs REST e conectores personalizados, garantindo que os dados circulem com mais consistência.</li>
+                    <li>Conector customizado implementado para Microsoft Forms, automatizando o recebimento, leitura e encaminhamento das respostas.</li>
+                    <li>Dashboards desenvolvidos no Power BI integrados ao workflow, consolidando dados dos aplicativos e fluxos em relatórios interativos para apoiar a tomada de decisão.</li>
+                </ul>
+                <div class="tsub">Principais Atividades</div>
+                <ul class="tbullets">
+                    <li>Criação de soluções low-code com foco em usabilidade, desempenho e escalabilidade.</li>
+                    <li>Lógica para aprovações em várias etapas, com validações e tratamento de exceções.</li>
+                    <li>Organização dos dados no Dataverse e SharePoint, considerando regras de acesso e requisitos do negócio.</li>
+                    <li>Apoio a times de diferentes áreas para entender gargalos e propor automações de impacto real.</li>
+                    <li>Integrações com APIs usando JSON, chamadas HTTP e boas práticas de segurança e estabilidade.</li>
+                    <li>Construção de dashboards em Power BI conectados ao Dataverse e SharePoint, trazendo indicadores de performance, KPIs e acompanhamento de processos automatizados.</li>
+                </ul>
+            </div>
+            <div class="en-only" style="display:none">
+                <ul class="tbullets">
+                    <li>Built apps in Power Apps (Canvas &amp; Model-Driven) to replace manual processes and speed up day-to-day team workflows.</li>
+                    <li>Structured flows in Power Automate with SharePoint and Dataverse, bringing more traceability and fewer operational errors.</li>
+                    <li>System connections built with REST APIs and custom connectors, ensuring consistent data flow across platforms.</li>
+                    <li>Custom connector implemented for Microsoft Forms, automating response receipt, parsing, and routing.</li>
+                    <li>Power BI dashboards integrated into the workflow, consolidating data from apps and flows into interactive reports to support decision-making.</li>
+                </ul>
+                <div class="tsub">Key Activities</div>
+                <ul class="tbullets">
+                    <li>Low-code solutions built with focus on usability, performance, and scalability.</li>
+                    <li>Multi-step approval logic with validations and exception handling.</li>
+                    <li>Data organization in Dataverse and SharePoint, considering access rules and business requirements.</li>
+                    <li>Support to cross-functional teams to identify bottlenecks and propose high-impact automations.</li>
+                    <li>API integrations using JSON, HTTP calls, and best practices for security and stability.</li>
+                    <li>Power BI dashboards connected to Dataverse and SharePoint, delivering performance indicators, KPIs, and automated process tracking.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="titem reveal">
@@ -302,16 +301,40 @@
             <div class="tperiod">Jan 2024 — Abr 2024</div>
             <div class="trole">Data Visualization Specialist</div>
             <div class="tco">4Data Driven · São Paulo, SP · <span data-i18n="rem">Remoto</span></div>
-            <ul class="tbullets pt-only">
-                <li>Transformação de dados brutos em insights estratégicos, desenvolvendo dashboards e relatórios interativos no Power BI para decisões de alto impacto.</li>
-                <li>Criação de análises acionáveis e visualizações dinâmicas, otimizando a tomada de decisão com dados claros e estruturados.</li>
-                <li>Liderança na criação de relatórios gerenciais que atendiam às necessidades operacionais e estratégicas.</li>
-            </ul>
-            <ul class="tbullets en-only" style="display:none">
-                <li>Transformation of raw data into strategic insights, developing interactive dashboards and reports in Power BI to support high-impact decision-making.</li>
-                <li>Creation of actionable analytics and dynamic visualizations, optimizing decision-making with clear and structured data.</li>
-                <li>Leadership in the development of management reports, ensuring solutions met both operational and strategic business needs.</li>
-            </ul>
+            <div class="pt-only">
+                <p class="tdesc">Transformei dados brutos em insights estratégicos, criando painéis interativos com foco em apoiar decisões importantes de grandes clientes, como Itaú e DiDi.</p>
+                <div class="tsub">Principais Resultados</div>
+                <ul class="tbullets">
+                    <li>Dashboards automatizados em Power BI, focados em acelerar a análise e facilitar o dia a dia das áreas usuárias.</li>
+                    <li>Modelagem com Star Schema para deixar os relatórios mais confiáveis e com performance mais leve.</li>
+                    <li>Relatórios gerenciais construídos de forma que atendessem tanto o operacional quanto a visão de diretoria.</li>
+                    <li>Visualizações adaptadas no Looker Studio, considerando diferentes perfis de uso e necessidade de leitura rápida dos dados.</li>
+                </ul>
+                <div class="tsub">Atividades Principais</div>
+                <ul class="tbullets">
+                    <li>Criação de painéis com DAX avançado e SQL, sempre pensando na experiência de quem vai consumir o dado.</li>
+                    <li>Conversas diretas com o cliente para entender o que ele precisava ver e como entregar isso de forma visual e prática.</li>
+                    <li>Ajustes em relatórios no Looker Studio, trazendo mais flexibilidade e leitura clara para cada tipo de área.</li>
+                    <li>Suporte com tratamento de dados e ETL, organizando as bases para garantir consistência nos relatórios finais.</li>
+                </ul>
+            </div>
+            <div class="en-only" style="display:none">
+                <p class="tdesc">Transformed raw data into strategic insights, building interactive dashboards focused on supporting key decisions for major clients including Itaú and DiDi.</p>
+                <div class="tsub">Key Results</div>
+                <ul class="tbullets">
+                    <li>Automated Power BI dashboards focused on speeding up analysis and supporting daily operations.</li>
+                    <li>Star Schema modeling to make reports more reliable and performant.</li>
+                    <li>Management reports built to serve both operational and executive decision-making needs.</li>
+                    <li>Looker Studio visualizations adapted to different user profiles and quick-read requirements.</li>
+                </ul>
+                <div class="tsub">Key Activities</div>
+                <ul class="tbullets">
+                    <li>Dashboards built with advanced DAX and SQL, always keeping the end-user experience in mind.</li>
+                    <li>Direct client conversations to understand what they needed to see and how to deliver it visually.</li>
+                    <li>Looker Studio report adjustments, bringing more flexibility and clear readability per team.</li>
+                    <li>Data treatment and ETL support, organizing datasets to ensure consistency in final reports.</li>
+                </ul>
+            </div>
         </div>
 
         <div class="titem reveal">
@@ -319,99 +342,41 @@
             <div class="tperiod">Abr 2023 — Jan 2024</div>
             <div class="trole">Consultor Power BI</div>
             <div class="tco">Dataside · São José dos Campos, SP · <span data-i18n="rem">Remoto</span></div>
-            <ul class="tbullets pt-only">
-                <li>Modelagem de dados avançada (Star Schema) para clientes de grande porte — Itaú e DiDi — assegurando eficiência, escalabilidade e integridade.</li>
-                <li>Desenvolvimento de soluções avançadas de data storytelling para Renner e Minerva, utilizando DAX avançado e visualizações impactantes no Power BI.</li>
-                <li>Implementação de processos de ETL com Power Query e SQL, consolidando múltiplas fontes de dados.</li>
-                <li>Integração e automação de fluxos de dados com Azure DevOps, garantindo rastreabilidade e governança.</li>
-                <li>Otimização de relatórios interativos utilizando M Language para manipulação de dados complexos e melhoria de performance.</li>
-            </ul>
-            <ul class="tbullets en-only" style="display:none">
-                <li>Direct collaboration with large-scale clients (Itaú and DiDi), developing custom data analysis solutions with advanced DAX and optimized SQL.</li>
-                <li>Development of advanced data storytelling solutions for Renner and Minerva, leveraging advanced DAX and impactful visualizations.</li>
-                <li>Implementation of ETL processes with Power Query and SQL, consolidating multiple data sources for a complete, scalable decision-making framework.</li>
-                <li>Integration and automation of data flows using Azure DevOps, ensuring efficiency, traceability, and governance.</li>
-                <li>Optimization of interactive reports utilizing M Language to handle complex data and improve performance.</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-    <div class="sh reveal"><span class="sn">03</span><h2 class="st" data-i18n="s3">Projetos</h2><div class="sl"></div></div>
-    <!-- To add a screenshot: replace the <div class="pvis pvis-X"> block with <img src="your-screenshot.png" style="width:100%;height:170px;object-fit:cover"> -->
-    <div class="pgrid">
-
-        <div class="pcard reveal">
-            <div class="pvis pvis-1">
-                <div class="pvis-bars">
-                    <div class="pvis-bar" style="height:45%"></div><div class="pvis-bar" style="height:70%"></div><div class="pvis-bar" style="height:55%"></div><div class="pvis-bar" style="height:90%"></div><div class="pvis-bar" style="height:65%"></div><div class="pvis-bar" style="height:80%"></div><div class="pvis-bar" style="height:50%"></div><div class="pvis-bar" style="height:95%"></div><div class="pvis-bar" style="height:60%"></div><div class="pvis-bar" style="height:75%"></div>
-                </div>
-                <span class="pbadge pt-only">Dashboard Power BI</span>
-                <span class="pbadge en-only" style="display:none">Power BI Dashboard</span>
+            <div class="pt-only">
+                <div class="tsub">Principais Resultados</div>
+                <ul class="tbullets">
+                    <li>Redução de até 50% no tempo de análise de relatórios operacionais com automatizações em Power BI.</li>
+                    <li>Mais de 35% de ganho em acuracidade dos dados usados por times comercial e financeiro.</li>
+                    <li>Soluções escaláveis entregues para planejamento estratégico e supply chain, aumentando eficiência nos fluxos de decisão.</li>
+                    <li>Dashboards otimizados com carregamento até 30% mais rápido, melhorando a experiência em dispositivos móveis.</li>
+                </ul>
+                <div class="tsub">Principais Atividades</div>
+                <ul class="tbullets">
+                    <li>Consultoria técnica e estratégica em BI com foco em clientes como Renner e Minerva, desde entendimento da dor até entrega da solução.</li>
+                    <li>Desenvolvimento de relatórios com DAX avançado, estruturação com Star Schema e storytelling voltado a indicadores-chave.</li>
+                    <li>Conexão entre bases e automação de fluxos com Azure DevOps, garantindo rastreabilidade e organização dos projetos.</li>
+                    <li>Uso de SQL e Power Query no dia a dia para tratar dados e entregar relatórios mais confiáveis e ágeis.</li>
+                    <li>Apoio na configuração do ambiente Power BI com controle de acesso, organização por área e segurança da informação.</li>
+                    <li>Levantamento de oportunidades para simplificar rotinas analíticas e eliminar retrabalho em análises recorrentes.</li>
+                </ul>
             </div>
-            <div class="pbody">
-                <div class="pclient">Mars · Royal Canin</div>
-                <div class="ptitle pt-only">Suite de Analytics Multicanal</div>
-                <div class="ptitle en-only" style="display:none">Multi-Channel Analytics Suite</div>
-                <div class="pdesc pt-only">Plataforma de analytics cobrindo SELL OUT, Perfect Store, JBP, Service Level e Varejo 360 para os canais KAN e VET, com modelagem Star Schema e medidas DAX complexas.</div>
-                <div class="pdesc en-only" style="display:none">Analytics platform covering SELL OUT, Perfect Store, JBP, Service Level and Varejo 360 for KAN and VET channels, with advanced Star Schema modeling and complex DAX measures.</div>
-                <div class="ptools"><span class="ptool">Power BI</span><span class="ptool">DAX</span><span class="ptool">Star Schema</span><span class="ptool">SQL</span></div>
-            </div>
-        </div>
-
-        <div class="pcard reveal">
-            <div class="pvis pvis-2">
-                <div class="pvis-bars">
-                    <div class="pvis-bar" style="height:60%"></div><div class="pvis-bar" style="height:40%"></div><div class="pvis-bar" style="height:85%"></div><div class="pvis-bar" style="height:55%"></div><div class="pvis-bar" style="height:70%"></div><div class="pvis-bar" style="height:45%"></div><div class="pvis-bar" style="height:90%"></div><div class="pvis-bar" style="height:65%"></div><div class="pvis-bar" style="height:50%"></div><div class="pvis-bar" style="height:78%"></div>
-                </div>
-                <span class="pbadge pt-only">Aplicativo Power Apps</span>
-                <span class="pbadge en-only" style="display:none">Power Apps Application</span>
-            </div>
-            <div class="pbody">
-                <div class="pclient">Johnson &amp; Johnson</div>
-                <div class="ptitle pt-only">App de Gestão Logística 3PL</div>
-                <div class="ptitle en-only" style="display:none">3PL Logistics Management App</div>
-                <div class="pdesc pt-only">Aplicativo personalizado de gestão logística no Power Apps com integração via API customizada ao Microsoft Forms e mapeamento de interfaces XML para integração com ERP.</div>
-                <div class="pdesc en-only" style="display:none">Custom logistics management application in Power Apps with API integration to Microsoft Forms and XML interface mapping for ERP system connectivity.</div>
-                <div class="ptools"><span class="ptool">Power Apps</span><span class="ptool">Power Automate</span><span class="ptool">APIs</span><span class="ptool">SharePoint</span></div>
-            </div>
-        </div>
-
-        <div class="pcard reveal">
-            <div class="pvis pvis-3">
-                <div class="pvis-bars">
-                    <div class="pvis-bar" style="height:80%"></div><div class="pvis-bar" style="height:50%"></div><div class="pvis-bar" style="height:65%"></div><div class="pvis-bar" style="height:40%"></div><div class="pvis-bar" style="height:95%"></div><div class="pvis-bar" style="height:70%"></div><div class="pvis-bar" style="height:55%"></div><div class="pvis-bar" style="height:85%"></div><div class="pvis-bar" style="height:45%"></div><div class="pvis-bar" style="height:60%"></div>
-                </div>
-                <span class="pbadge pt-only">Analytics Corporativa</span>
-                <span class="pbadge en-only" style="display:none">Enterprise Analytics</span>
-            </div>
-            <div class="pbody">
-                <div class="pclient">Itaú · DiDi</div>
-                <div class="ptitle pt-only">Soluções de Analytics Corporativas</div>
-                <div class="ptitle en-only" style="display:none">Enterprise Analytics Solutions</div>
-                <div class="pdesc pt-only">Modelagem de dados e soluções de analytics para clientes de grande porte com arquitetura Star Schema otimizada, DAX avançado e consultas SQL performáticas.</div>
-                <div class="pdesc en-only" style="display:none">Data modeling and analytics solutions for large-scale clients with optimized Star Schema architecture, advanced DAX, and high-performance SQL queries.</div>
-                <div class="ptools"><span class="ptool">Power BI</span><span class="ptool">SQL</span><span class="ptool">DAX</span><span class="ptool">Star Schema</span></div>
-            </div>
-        </div>
-
-        <div class="pcard reveal">
-            <div class="pvis pvis-4">
-                <div class="pvis-bars">
-                    <div class="pvis-bar" style="height:55%"></div><div class="pvis-bar" style="height:88%"></div><div class="pvis-bar" style="height:42%"></div><div class="pvis-bar" style="height:72%"></div><div class="pvis-bar" style="height:60%"></div><div class="pvis-bar" style="height:95%"></div><div class="pvis-bar" style="height:48%"></div><div class="pvis-bar" style="height:66%"></div><div class="pvis-bar" style="height:82%"></div><div class="pvis-bar" style="height:53%"></div>
-                </div>
-                <span class="pbadge">Data Storytelling</span>
-            </div>
-            <div class="pbody">
-                <div class="pclient">Renner · Minerva</div>
-                <div class="ptitle pt-only">Dashboards de Data Storytelling</div>
-                <div class="ptitle en-only" style="display:none">Data Storytelling Dashboards</div>
-                <div class="pdesc pt-only">Dashboards com visualizações impactantes e narrativa de dados. ETL consolidando múltiplas fontes via Power Query, SQL e M Language para garantir performance e escalabilidade.</div>
-                <div class="pdesc en-only" style="display:none">Dashboards with impactful visualizations and data narratives. ETL consolidating multiple sources via Power Query, SQL and M Language to ensure performance and scalability.</div>
-                <div class="ptools"><span class="ptool">Power BI</span><span class="ptool">Power Query</span><span class="ptool">M Language</span><span class="ptool">SQL</span></div>
+            <div class="en-only" style="display:none">
+                <div class="tsub">Key Results</div>
+                <ul class="tbullets">
+                    <li>Up to 50% reduction in operational report analysis time through Power BI automation.</li>
+                    <li>Over 35% improvement in data accuracy for commercial and financial teams.</li>
+                    <li>Scalable solutions delivered for strategic planning and supply chain, increasing decision-making efficiency.</li>
+                    <li>Dashboards optimized with up to 30% faster loading, improving mobile experience.</li>
+                </ul>
+                <div class="tsub">Key Activities</div>
+                <ul class="tbullets">
+                    <li>Technical and strategic BI consulting for clients such as Renner and Minerva, from problem understanding to solution delivery.</li>
+                    <li>Report development with advanced DAX, Star Schema, and KPI-focused data storytelling.</li>
+                    <li>System integration and flow automation with Azure DevOps, ensuring traceability and project organization.</li>
+                    <li>SQL and Power Query for daily data treatment and reliable, agile report delivery.</li>
+                    <li>Power BI environment setup with access control, area organization, and data security.</li>
+                    <li>Identification of opportunities to simplify analytical routines and eliminate rework in recurring analyses.</li>
+                </ul>
             </div>
         </div>
 
@@ -419,8 +384,8 @@
 </section>
 
 <!-- SKILLS -->
-<section id="skills" style="background:var(--bg)">
-    <div class="sh reveal"><span class="sn">04</span><h2 class="st" data-i18n="s4">Habilidades</h2><div class="sl"></div></div>
+<section id="skills">
+    <div class="sh reveal"><span class="sn">03</span><h2 class="st" data-i18n="s3">Habilidades</h2><div class="sl"></div></div>
     <div class="sgrid reveal">
         <div class="scat">
             <div class="scatlbl">Power Platform</div>
@@ -436,7 +401,7 @@
         </div>
         <div class="scat">
             <div class="scatlbl" data-i18n="sc4">Cloud &amp; Ferramentas</div>
-            <div class="stags"><span class="stag">Azure DevOps</span><span class="stag">SharePoint</span><span class="stag">APIs REST</span><span class="stag">Microsoft 365</span></div>
+            <div class="stags"><span class="stag">Azure DevOps</span><span class="stag">SharePoint</span><span class="stag">APIs REST</span><span class="stag">Microsoft 365</span><span class="stag">Looker Studio</span></div>
         </div>
         <div class="scat">
             <div class="scatlbl">Soft Skills</div>
@@ -452,8 +417,8 @@
 </section>
 
 <!-- EDUCATION -->
-<section id="education">
-    <div class="sh reveal"><span class="sn">05</span><h2 class="st" data-i18n="s5">Formação</h2><div class="sl"></div></div>
+<section id="education" style="background:var(--bg)">
+    <div class="sh reveal"><span class="sn">04</span><h2 class="st" data-i18n="s4">Formação</h2><div class="sl"></div></div>
     <div class="egrid">
         <div class="ecard reveal"><span class="estatus cur" data-i18n="ecur">Cursando</span><div class="edeg" data-i18n="ed1">Pós-Graduação em Engenharia de Dados e IA</div><div class="einst">Xperiun | Data Analytics</div><div class="eperiod" data-i18n="ep1">Mar 2025 — Jun 2026</div></div>
         <div class="ecard reveal"><span class="estatus done" data-i18n="edone">Concluído</span><div class="edeg" data-i18n="ed2">Bacharelado em Análise de Dados</div><div class="einst">Xperiun | Data Analytics</div><div class="eperiod" data-i18n="ep2">Jan 2024 — Dez 2025</div></div>
@@ -464,17 +429,17 @@
 
 <!-- LANGUAGES -->
 <section id="languages">
-    <div class="sh reveal"><span class="sn">06</span><h2 class="st" data-i18n="s6">Idiomas</h2><div class="sl"></div></div>
+    <div class="sh reveal"><span class="sn">05</span><h2 class="st" data-i18n="s5">Idiomas</h2><div class="sl"></div></div>
     <div class="lgrid reveal">
         <div class="lcard"><div class="lflag">🇧🇷</div><div class="lname">Português</div><div class="llevel" data-i18n="lnat">Língua Nativa</div></div>
         <div class="lcard"><div class="lflag">🇬🇧</div><div class="lname">English</div><div class="llevel" data-i18n="ladv">C1 — Avançado</div></div>
-        <div class="lcard"><div class="lflag">🇸🇮</div><div class="lname">Slovenščina</div><div class="llevel" data-i18n="lbas">A2 — Básico</div></div>
+        <div class="lcard"><div class="lflag">🇸🇮</div><div class="lname">Esloveno</div><div class="llevel" data-i18n="lbas">A2 — Básico</div></div>
     </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <div class="sh reveal"><span class="sn">07</span><h2 class="st" data-i18n="s7">Contato</h2><div class="sl"></div></div>
+    <div class="sh reveal"><span class="sn">06</span><h2 class="st" data-i18n="s6">Contato</h2><div class="sl"></div></div>
     <div class="cgrid">
         <div class="reveal">
             <p class="cintro pt-only">Vamos <em>construir algo</em> extraordinário juntos?</p>
@@ -490,6 +455,10 @@
             <a href="https://www.linkedin.com/in/natashasugiyama/" target="_blank" rel="noopener" class="clink">
                 <div class="cicon"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></div>
                 <div><div class="cllbl">LinkedIn</div><div class="clval">linkedin.com/in/natashasugiyama</div></div>
+            </a>
+            <a href="https://github.com/nasugiyama" target="_blank" rel="noopener" class="clink">
+                <div class="cicon"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.741 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg></div>
+                <div><div class="cllbl">GitHub</div><div class="clval">github.com/nasugiyama</div></div>
             </a>
             <a href="https://app.xperiun.com/in/natashasugiyama" target="_blank" rel="noopener" class="clink">
                 <div class="cicon"><svg width="17" height="17" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></div>
@@ -511,11 +480,11 @@
 <script>
 const T = {
   pt: {
-    'nav.about':'Sobre','nav.experience':'Experiência','nav.projects':'Projetos','nav.skills':'Skills','nav.education':'Formação','nav.languages':'Idiomas','nav.contact':'Contato',
+    'nav.about':'Sobre','nav.experience':'Experiência','nav.skills':'Skills','nav.education':'Formação','nav.languages':'Idiomas','nav.contact':'Contato',
     'hero.sub':'Transformo dados em decisões. Especialista em Power Platform, Power BI e automação de processos — criando soluções analíticas de alto impacto para empresas globais.',
     'hero.btn1':'Ver Experiência','hero.btn2':'Entrar em Contato',
     'stat1':'Anos de Exp.','stat2':'Formações','stat3':'Idiomas',
-    's1':'Sobre Mim','s2':'Experiência','s3':'Projetos','s4':'Habilidades','s5':'Formação','s6':'Idiomas','s7':'Contato',
+    's1':'Sobre Mim','s2':'Experiência','s3':'Habilidades','s4':'Formação','s5':'Idiomas','s6':'Contato',
     'aloc':'Localização','alocv':'Mirna, Eslovênia','aspec':'Especialidade','amode':'Modalidade','amodev':'Remoto · Projetos globais',
     'cur':'Atual','rem':'Remoto',
     'sc2':'Linguagens & Dados','sc3':'Modelagem & Arquitetura','sc4':'Cloud & Ferramentas',
@@ -528,11 +497,11 @@ const T = {
     'cphone':'Telefone'
   },
   en: {
-    'nav.about':'About','nav.experience':'Experience','nav.projects':'Projects','nav.skills':'Skills','nav.education':'Education','nav.languages':'Languages','nav.contact':'Contact',
+    'nav.about':'About','nav.experience':'Experience','nav.skills':'Skills','nav.education':'Education','nav.languages':'Languages','nav.contact':'Contact',
     'hero.sub':'I turn data into decisions. Power Platform specialist in Power BI and process automation — building high-impact analytical solutions for global companies.',
     'hero.btn1':'View Experience','hero.btn2':'Get in Touch',
     'stat1':'Years of Exp.','stat2':'Degrees','stat3':'Languages',
-    's1':'About Me','s2':'Experience','s3':'Projects','s4':'Skills','s5':'Education','s6':'Languages','s7':'Contact',
+    's1':'About Me','s2':'Experience','s3':'Skills','s4':'Education','s5':'Languages','s6':'Contact',
     'aloc':'Location','alocv':'Mirna, Slovenia','aspec':'Expertise','amode':'Work mode','amodev':'Remote · Global projects',
     'cur':'Present','rem':'Remote',
     'sc2':'Languages & Data','sc3':'Modeling & Architecture','sc4':'Cloud & Tools',
