@@ -152,7 +152,8 @@
         .lgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
         .lcard { padding: 2.75rem 2rem; border: 1px solid rgba(255,255,255,.08); border-radius: 4px; text-align: center; background: rgba(255,255,255,.03); transition: background .25s, transform .25s; }
         .lcard:hover { background: rgba(255,255,255,.07); transform: translateY(-3px); }
-        .lflag { font-size: 2.6rem; margin-bottom: .9rem; line-height: 1; }
+        .lflag { margin-bottom: .9rem; line-height: 1; }
+        .lflag img { width: 64px; height: 43px; object-fit: cover; border-radius: 4px; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
         .lname { font-family: 'Cormorant Garamond', serif; font-size: 1.85rem; font-weight: 300; color: white; margin-bottom: .45rem; }
         .llevel { font-size: .66rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: rgba(255,255,255,.33); }
 
@@ -591,9 +592,9 @@
 <section id="languages" style="background:var(--navy)">
     <div class="sh reveal"><span class="sn">06</span><h2 class="st" data-i18n="s6">Idiomas</h2><div class="sl"></div></div>
     <div class="lgrid reveal">
-        <div class="lcard"><div class="lflag">🇧🇷</div><div class="lname">Português</div><div class="llevel" data-i18n="lnat">Língua Nativa</div></div>
-        <div class="lcard"><div class="lflag">🇬🇧</div><div class="lname">English</div><div class="llevel" data-i18n="ladv">C1 — Avançado</div></div>
-        <div class="lcard"><div class="lflag">🇸🇮</div><div class="lname">Esloveno</div><div class="llevel" data-i18n="lbas">A2 — Básico</div></div>
+        <div class="lcard"><div class="lflag"><img src="https://flagcdn.com/w80/br.png" alt="Brasil"></div><div class="lname">Português</div><div class="llevel" data-i18n="lnat">Língua Nativa</div></div>
+        <div class="lcard"><div class="lflag"><img src="https://flagcdn.com/w80/gb.png" alt="UK"></div><div class="lname">English</div><div class="llevel" data-i18n="ladv">C1 — Avançado</div></div>
+        <div class="lcard"><div class="lflag"><img src="https://flagcdn.com/w80/si.png" alt="Eslovênia"></div><div class="lname">Esloveno</div><div class="llevel" data-i18n="lbas">A2 — Básico</div></div>
     </div>
 </section>
 
